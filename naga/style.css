@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	scroll-behavior: smooth;
+}
+body
+{
+	min-height: 100vh;
+	background:linear-gradient(#223870,#488BAF);
+
+}
+header
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 30px 100px;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 10000;
+	
+}
+
+header ul
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header ul li
+{
+	list-style: none;
+	margin-left: 20px;
+}
+header ul li a
+{
+	text-decoration: none;
+	padding: 6px 15px;
+	color: #fff;
+	border-radius: 20px;
+}
+header ul li a:hover,
+header ul li a.active
+{
+	background:#fff;
+	color: #223870;
+}
+section
+{
+	
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	padding: 100px;
+	display: flex;
+	justify-content:center;
+	align-content: center;
+	overflow: hidden;
+}
+section::before
+{
+	content: '';
+	position: absolute;
+	bottom:0;
+	width:100%;
+	height: 100px;
+	background: linear-gradient(to top, #482B47, transparent);
+	z-index: 1000;
+}
+section img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	pointer-events: none;
+}
+section img#moon
+{
+	mix-blend-mode: screen;
+}
+section img#clouds
+{
+	mix-blend-mode: screen;
+}
+section img#mountain_front
+{
+	z-index: 10;
+}
+
+#text
+{
+	position:absolute;
+	right: -1000px;
+	max-resolution: 10px;
+	 background: -webkit-linear-gradient(#fff, #482B47);
+	  -webkit-background-clip: text;
+	  -webkit-text-fill-color: transparent;
+	white-space: nowrap;
+	font-size: 7.5vw;
+	z-index: 9;
+	transform: translateY(400px)
+	
+}
+#btn
+{
+	text-decoration: none;
+	display: inline-block;
+	padding: 8px 30px;
+	border-radius: 40px;
+	background: #fff;
+	color:#223870;
+	z-index: 9;
+	font-size: 2em;
+	transform: translateY(630px)
+}
+
+.sec
+{
+	
+	
+	padding: 100px;
+	background: #482B47;
+	z-index: 11;
+	float:left;
+	
+}
+
+.sec h2
+{	position: relative;
+	float:left;
+	font-size: 3.5em;
+	margin-bottom: 10px;
+	color: #fff;
+	
+}
+.sec footer{
+	text-align: center;
+	font-size: 20px;
+	margin-bottom: 5px;
+	color: #fff;
+	
+}
+.sec footer:before{
+	content:"\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
+	
+}
+/*
+.sec p
+{	
+	float:left;
+	font-size: 1.2em;
+	color: #fff;
+	margin-right: 400px;
+}
+*/
+.sec .post
+{	
+	float:right;
+	margin-top: 20px;
+	margin-right: 400px;
+	font-size: 1.2em;
+	color: #fff;
+	background-color: #482B47;
+	border-radius: 5px;
+	
+	padding: 2% 3%;
+	filter: drop-shadow(0 12px 0.95rem #182B47 );
+}
+.sec .post img{
+	float: inherit;
+	margin-top: 100px;
+	filter: drop-shadow(0 12px 0.9px #182B47 );
+}
+.sec	.head{
+	text-align: center;
+	font-size: 40px;
+}
+.sec	.head:hover{
+	background-color:#fff;
+	width:inherit;
+	color: #223870;
+}
+
+#top-sidebar, #mid-sidebar, #bottom-sidebar {
+	display: flex;
+	flex-flow: column;
+	transform: translateX(-50px);
+	width: 21%;
+	overflow: auto;
+	position:absolute;
+	right: 50px;
+	float:inherit;
+	font-size: 12px;
+	color: #fff;
+	background-color: #482B47;
+	border-radius: 5px;
+	margin: .5% -10px -10px 3%;
+	padding: 2% 3%;
+	filter: drop-shadow(0 12px 0.95rem #182B47 );
+	
+	transition: transform .2s; /* Animation */
+}
+#top-sidebar{
+	transform: translateY(90px);
+	z-index: 15;
+}
+#mid-sidebar{
+	
+	transform: translateY(270px);
+	z-index: 15;
+	
+}
+#bottom-sidebar{
+	
+	transform: translateY(450px);
+	z-index: 15;
+	
+}
+#bottom-sidebar:hover{
+	transform: scale(1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+	transform: translateY(440px);
+}
+#mid-sidebar:hover{
+	transform: scale(1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+	transform: translateY(250px);
+}
+#top-sidebar:hover{
+	transform: scale(1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+	transform: translateY(70px);
+}
+
+.mainFooter li {
+	list-style: none;
+	text-decoration: none;
+	display:inline-block;
+	width:92%;
+	margin-left: 50px;
+	color: #fff;
+}
+
+
+
+
+
+
